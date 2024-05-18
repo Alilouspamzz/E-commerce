@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: rgb(198, 206, 216);
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+
+#user {
+  margin-bottom: 10px;
+}

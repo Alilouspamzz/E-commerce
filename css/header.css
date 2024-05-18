@@ -1,0 +1,162 @@
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10%;
+  padding-block: 10px;
+  transition: 0.4s;
+  transition: 0.3s all ease;
+  & .logo {
+    color: var(--body-font);
+    & .icon {
+      font-size: 25px;
+      margin-right: 0.8rem;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 800;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+  & .login {
+    margin-inline: 1.2rem;
+  }
+
+  & .links .fa-solid {
+    margin-right: 0.5rem;
+  }
+  & .login,
+  & .register,
+  & .cart {
+    color: var(--body-font);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.44rem 1rem;
+    border: 1px solid var(--footer);
+    border-radius: 25px;
+    transition: 0.5s all ease;
+  }
+
+  & .cart {
+    position: relative;
+    color: var(--body-bg);
+    background-color: var(--body-font);
+  }
+
+  & .login:active,
+  & .register:active,
+  & .cart:active {
+    scale: 0.8;
+  }
+
+  & .login:hover,
+  & .register:hover {
+    color: var(--body-bg);
+    background-color: var(--body-font);
+  }
+
+  & .product-number {
+    position: absolute;
+    right: 0;
+    top: -5px;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    background-color: var(--red-button);
+    width: 15px;
+    height: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+  }
+}
+
+.scrolDown {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--footer);
+  z-index: 1;
+
+  & .fa-solid,
+  p,
+  span {
+    color: var(--font-color);
+  }
+
+  a.login,
+  a.register {
+    color: var(--font-color);
+    border: var(--font-color) 1px solid;
+  }
+
+  a.login:hover,
+  a.register:hover {
+    color: var(--footer);
+    background-color: var(--font-color);
+    i {
+      transition: 0.5s all ease;
+
+      color: var(--footer);
+    }
+  }
+}
+
+@media (width < 380px) {
+  .scrolDown {
+    a {
+      display: block;
+    }
+
+    header .navbar .login {
+      margin-block: 5px;
+      margin-inline: 0;
+    }
+
+    & .login,
+    & .register,
+    & .cart {
+      width: 150px;
+      text-align: center;
+    }
+  }
+}
+
+@media (width < 600px) {
+  header .navbar {
+    flex-direction: column;
+  }
+
+  header .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  header .navbar .login {
+    margin-inline: 5px;
+  }
+}
+
+@media (width < 380px) {
+  a {
+    display: block;
+  }
+
+  header .navbar .login {
+    margin-block: 5px;
+    margin-inline: 0;
+  }
+
+  & .login,
+  & .register,
+  & .cart {
+    width: 150px;
+    text-align: center;
+  }
+}

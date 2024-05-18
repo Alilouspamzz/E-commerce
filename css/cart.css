@@ -1,0 +1,135 @@
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.cart-products {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: space-evenly;
+  margin-top: 50px;
+  gap: 10px;
+}
+.products {
+  margin-top: 10px;
+  align-self: center;
+  margin-inline: auto;
+  box-shadow: 1px 1px 1px rgba(116, 109, 112, 0.747);
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  & .count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+    padding-inline: 5px;
+    p {
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      text-align: center;
+      color: var(--font-color);
+      background-color: var(--blue-button);
+    }
+  }
+
+  & button {
+    border: none;
+    font-size: 16px;
+    background-color: #fff;
+  }
+
+  .delet {
+    color: var(--red-button);
+  }
+
+  .count-icon {
+    color: var(--blue-button);
+  }
+}
+
+.clear-all {
+  background-color: var(--red-button);
+  color: var(--font-color);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  width: 150px;
+  height: 40px;
+  margin: 10px auto 30px;
+  transition: 0.3s all ease;
+}
+
+.clear-all:active {
+  background-color: var(--red-button-avtive);
+  letter-spacing: 0.8px;
+}
+button:active {
+  scale: 0.9;
+}
+
+.cart-sammary {
+  width: 300px;
+  margin: 10px auto 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  box-shadow: 2px 3px 2px rgba(116, 109, 112, 0.747);
+  & h2 {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 0.5px solid #52505067;
+  }
+  & .total {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 10px;
+  }
+
+  & button {
+    height: 40px;
+    border: none;
+    color: var(--font-color);
+    font-weight: 700;
+    background-color: var(--blue-button);
+  }
+
+  a {
+    padding: 10px;
+    text-align: center;
+    color: var(--red-button);
+  }
+}
+
+@media (width < 600px) {
+  .products {
+    width: 95%;
+
+    & img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+@media (width < 450px) {
+  h3 {
+    font-size: 16px;
+  }
+  .cart-products {
+    margin-top: 100px;
+  }
+}

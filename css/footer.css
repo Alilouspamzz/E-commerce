@@ -1,0 +1,9 @@
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--footer);
+  color: rgb(120, 125, 129);
+  & span {
+    color: rgb(172, 92, 92);
+  }
+}

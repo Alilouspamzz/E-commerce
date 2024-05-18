@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.home-img {
+  background: url(../images/bac.jpg) no-repeat center/cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+section.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10%;
+  line-height: 30px;
+
+  & .lifestyle {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+
+  & .men,
+  & .sale {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  & span {
+    color: var(--red-button);
+  }
+
+  & .free-shipping {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  & .shop {
+    width: 200px;
+    font-size: 14px;
+    padding-inline: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: black;
+    color: var(--font-color);
+    transition: 0.3s all ease;
+  }
+
+  & .shop:hover {
+    background-color: var(--footer);
+  }
+
+  & .shop:active {
+    letter-spacing: 1px;
+    scale: 0.9;
+  }
+}
